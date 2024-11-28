@@ -62,6 +62,7 @@
             display: flex;
             justify-content: center;
             z-index: 1;
+            display: none; /* Initially hidden */
         }
         #search-bar {
             width: 100%;
@@ -98,22 +99,23 @@
             background-color: #28a745;
             border-radius: 5px;
         }
-        section {
-            padding: 20px;
+        /* Hamburger Menu Styles */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 2;
         }
-        footer {
-            background-color: #005f73;
-            color: white;
-            text-align: center;
-            padding: 30px 0;
+        .hamburger div {
+            width: 30px;
+            height: 4px;
+            background-color: white;
+            margin: 6px 0;
+            transition: all 0.3s ease;
         }
-        footer a {
-            color: #ADD8E6;
-            text-decoration: none;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
+        /* Responsive Navbar */
         @media (max-width: 600px) {
             header h1 {
                 font-size: 2rem;
@@ -127,9 +129,19 @@
             nav ul {
                 flex-direction: column;
                 align-items: center;
+                display: none; /* Initially hidden for mobile */
             }
             nav ul li {
                 margin: 5px 0;
+            }
+            .hamburger {
+                display: block;
+            }
+            nav.active ul {
+                display: flex; /* Show menu when active */
+            }
+            #search-container.active {
+                display: flex; /* Show search bar when active */
             }
         }
     </style>
@@ -164,11 +176,26 @@
     </ul>
 </nav>
 
+<!-- Hamburger Icon -->
+<div class="hamburger" id="hamburger">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
 <section>
     <h2>Туршилтуудыг судлах</h2>
-    <p>Энэхүү платформ нь программчлал ашиглан шинжлэх ухааны туршилтуудыг интерактив байдлаар үзүүлэх бөгөөд таны суралцахад дэмжлэг үзүүлэх зорилготой юм.</p>
+    <p>Энэхүү платформ нь программчлал ашиглан шинжлэх ухааны туршилтуудыг интерактив байдлаар үзүүлэх бөгөөд таныг суралцахад дэмжлэг үзүүлэх зорилготой юм.</p>
 </section>
+
 <script>
+    // Hamburger menu toggle
+    document.getElementById('hamburger').addEventListener('click', function() {
+        document.querySelector('nav').classList.toggle('active');
+        document.getElementById('search-container').classList.toggle('active');
+    });
+
+    // Search bar redirect
     document.getElementById('search-bar').addEventListener('input', function(event) {
         let searchQuery = event.target.value.toLowerCase();
 
@@ -187,7 +214,6 @@
         }
     });
 </script>
-
 
 <footer>
     <p>Холбоо барих: <a href="mailto:tsolmonkhanorgil@gmail.com">tsolmonkhanorgil@gmail.com</a> | Утас: +95011555</p>
