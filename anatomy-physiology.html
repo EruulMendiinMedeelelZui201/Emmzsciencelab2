@@ -2,11 +2,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Анатоми ба физиологийн симуляциуд ба сургалт.">
+    <meta name="description" content="Анатоми ба Физиологи">
     <title>Анатоми ба Физиологи</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* Reuse header, navigation, footer styles from main page */
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
@@ -69,6 +68,34 @@
         footer a:hover {
             text-decoration: underline;
         }
+
+        .simulation-links {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .simulation-links li {
+            margin-bottom: 10px;
+        }
+
+        .simulation-links a {
+            text-decoration: none;
+            color: #005f73;
+            font-weight: bold;
+        }
+
+        .simulation-links a:hover {
+            text-decoration: underline;
+        }
+
+        .sketchfab-embed-wrapper {
+            margin-bottom: 30px;
+        }
+
+        .sketchfab-embed-wrapper iframe {
+            width: 100%;
+            height: 600px;
+        }
     </style>
 </head>
 <body>
@@ -82,26 +109,45 @@
     <ul>
         <li><a href="index.html">Нүүр хуудас</a></li>
         <li><a href="electronics.html">Электрон төхөөрөмжүүд ба Программууд</a></li>
-        <li><a href="physics.html">Физикийн Симуляци ба Туршилтууд</a></li>
+        <li><a href="physics.html">Физиксийн Симуляци</a></li>
+        <li><a href="anatomy-physiology.html">Анатоми ба Физиологи</a></li>
         <li><a href="biophysics-biochemistry.html">Биофизик ба Биохими</a></li>
     </ul>
 </nav>
 
-<!-- Anatomy and Physiology content -->
-<section>
+<!-- Anatomy and Physiology Content -->
+<section id="anatomy-physiology">
     <h2>Анатоми ба Физиологи</h2>
-    <p>Энэхүү хуудас нь хүний биеийн анатомийн бүтэц болон физиологийн үйл явцыг ойлгоход зориулагдсан симуляциудыг үзүүлдэг.</p>
-    <p>Доорх холбоосоор орж, анатомийн болон физиологийн шинж чанаруудыг судалж, туршилтуудыг хийж үзээрэй:</p>
-    <ul>
-        <li><a href="https://example.com/anatomy-simulation1" target="_blank">Симуляци 1: Хүний биеийн бүтэц</a></li>
-        <li><a href="https://example.com/anatomy-simulation2" target="_blank">Симуляци 2: Зүрх, судас ба амьсгалын систем</a></li>
-        <li><a href="https://example.com/anatomy-simulation3" target="_blank">Симуляци 3: Мэдрэлийн систем</a></li>
+    <p>Энэхүү хэсэгт хүний биологийн бүтэц болон физиологийн үйл ажиллагаа, анагаах ухааны шинжлэх ухаантай холбоотой мэдээллийг оруулна. 3d загварыг ачаалахад хэдэн секунд зарцуулагдаж магадгүй.</p>
+    
+    <!-- Embed Sketchfab Heart Model -->
+    <div class="sketchfab-embed-wrapper">
+        <iframe title="Realistic Human Heart" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/3f8072336ce94d18b3d0d055a1ece089/embed"></iframe>
+        <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+            <a href="https://sketchfab.com/3d-models/realistic-human-heart-3f8072336ce94d18b3d0d055a1ece089?utm_medium=embed&utm_campaign=share-popup&utm_content=3f8072336ce94d18b3d0d055a1ece089" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Realistic Human Heart</a> by 
+            <a href="https://sketchfab.com/neshallads?utm_medium=embed&utm_campaign=share-popup&utm_content=3f8072336ce94d18b3d0d055a1ece089" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">neshallads</a> on 
+            <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=3f8072336ce94d18b3d0d055a1ece089" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+        </p>
+    </div>
+
+    <!-- Links to Other Models -->
+    <ul class="simulation-links">
+        <li><a href="https://EruulMendiinMedeelelZui201.github.io/smoker-lungs-vs-non-smoker-lungs/" target="_blank" rel="noopener noreferrer">Тамхичдын уушиг, тамхи татдаггүй хүний ​​уушиг</a></li>
+        <li><a href="https://EruulMendiinMedeelelZui201.github.io/-/" target="_blank" rel="noopener noreferrer">Бөөр</a></li>
+        <li><a href="https://EruulMendiinMedeelelZui201.github.io/human-anatomy/" target="_blank" rel="noopener noreferrer">Хүний биeийн анатоми</a></li>
+        <li><a href="https://eruulmendiinmedeelelzui201.github.io/human-eyes1/" target="_blank" rel="noopener noreferrer">Нүдний алимны мэдрэлийн анатоми</a></li>
+        <li><a href="https://eruulmendiinmedeelelzui201.github.io/fetus--/" target="_blank" rel="noopener noreferrer">Ураг бүрэлдэх явц</a></li>
+        <li><a href="https://eruulmendiinmedeelelzui201.github.io/bowel/" target="_blank" rel="noopener noreferrer">Гэдэс</a></li>
+        <li><a href="https://eruulmendiinmedeelelzui201.github.io/brain/" target="_blank" rel="noopener noreferrer">Тархи</a></li>
+        <li><a href="https://eruulmendiinmedeelelzui201.github.io/-e-/" target="_blank" rel="noopener noreferrer">Артeраар дамжих цус</a></li>
+        <li><a href="https://eruulmendiinmedeelelzui201.github.io/--/" target="_blank" rel="noopener noreferrer">Булчингийн эд</a></li>
     </ul>
 </section>
 
-<!-- Footer Section -->
+<!-- Footer -->
 <footer>
-    <p>Холбоо барих: <a href="mailto:tsolmonkhanorgil@gmail.com">tsolmonkhanorgil@gmail.com</a> | Утас: +95011555</p>
+    <p>© 2024 Анатоми ба Физиологи. Бүх эрх хуулиар хамгаалагдсан.</p>
+    <p><a href="privacy-policy.html">Нууцлалын бодлого</a> | <a href="terms.html">Үйлчилгээний нөхцөл</a></p>
 </footer>
 
 </body>
