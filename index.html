@@ -36,7 +36,6 @@
             background: rgba(0, 0, 0, 0.5);
             z-index: -1;
         }
-        /* Logo & Title Section */
         .logo-title-container {
             position: absolute;
             top: 15px;
@@ -62,7 +61,7 @@
             display: flex;
             justify-content: center;
             z-index: 1;
-            display: none; /* Initially hidden */
+            display: none;
         }
         #search-bar {
             width: 100%;
@@ -99,23 +98,25 @@
             background-color: #28a745;
             border-radius: 5px;
         }
-        /* Hamburger Menu Styles */
         .hamburger {
             display: none;
             cursor: pointer;
-            position: absolute;
+            position: fixed;
             top: 20px;
             right: 20px;
-            z-index: 2;
+            z-index: 1000;
         }
         .hamburger div {
             width: 30px;
             height: 4px;
-            background-color: white;
+            background-color: #ffffff;
             margin: 6px 0;
             transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
         }
-        /* Responsive Navbar */
+        .hamburger:hover div {
+            background-color: #ffd700;
+        }
         @media (max-width: 600px) {
             header h1 {
                 font-size: 2rem;
@@ -129,7 +130,7 @@
             nav ul {
                 flex-direction: column;
                 align-items: center;
-                display: none; /* Initially hidden for mobile */
+                display: none;
             }
             nav ul li {
                 margin: 5px 0;
@@ -138,10 +139,10 @@
                 display: block;
             }
             nav.active ul {
-                display: flex; /* Show menu when active */
+                display: flex;
             }
             #search-container.active {
-                display: flex; /* Show search bar when active */
+                display: flex;
             }
         }
     </style>
@@ -176,7 +177,6 @@
     </ul>
 </nav>
 
-<!-- Hamburger Icon -->
 <div class="hamburger" id="hamburger">
     <div></div>
     <div></div>
@@ -189,16 +189,13 @@
 </section>
 
 <script>
-    // Hamburger menu toggle
     document.getElementById('hamburger').addEventListener('click', function() {
         document.querySelector('nav').classList.toggle('active');
         document.getElementById('search-container').classList.toggle('active');
     });
 
-    // Search bar redirect
     document.getElementById('search-bar').addEventListener('input', function(event) {
         let searchQuery = event.target.value.toLowerCase();
-
         if (searchQuery === "электрон төхөөрөмжүүд ба программууд") {
             window.location.href = "electronics.html";
         } else if (searchQuery === "физикийн симуляци ба туршилтууд") {
