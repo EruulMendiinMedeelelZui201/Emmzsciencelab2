@@ -29,27 +29,45 @@
         }
 
         nav {
+            position: fixed;
+            top: 0;
+            right: -250px; /* Make the menu off-screen initially */
+            width: 250px;
+            height: 100%;
             background-color: #005f73;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: right 0.3s ease-in-out; /* Smooth sliding */
+            z-index: 999;
+        }
+
+        nav.active {
+            right: 0; /* Slide in */
         }
 
         nav ul {
-            display: flex;
-            justify-content: center;
+            list-style: none;
             padding: 0;
             margin: 0;
-            list-style: none;
+            text-align: center;
         }
 
         nav ul li {
-            margin: 0 20px;
+            margin: 20px 0;
         }
 
         nav ul li a {
-            text-decoration: none;
             color: white;
+            text-decoration: none;
             font-size: 1.2rem;
-            padding: 10px 15px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
         }
 
         footer {
@@ -87,16 +105,65 @@
         .simulation-links a:hover {
             text-decoration: underline;
         }
+
+        /* Hamburger Menu Styles */
+        .hamburger {
+            position: fixed;
+            top: 25px;
+            right: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 25px;
+            cursor: pointer;
+            z-index: 1000;
+            transition: all 0.3s ease-in-out; /* Smooth transition for positioning */
+        }
+
+        .hamburger div {
+            width: 100%;
+            height: 4px;
+            background-color: #ffffff;
+            border-radius: 2px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .hamburger.active div:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active div:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active div:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* Adjustments for smaller screens */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .hamburger {
+                display: block;
+            }
+        }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Биофизик ба Биохими</h1>
-</header>
+<!-- Hamburger Menu -->
+<div class="hamburger" id="hamburger">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
 
-<!-- Navigation Bar -->
-<nav>
+<!-- Sidebar Navigation -->
+<nav id="side-menu">
     <ul>
         <li><a href="index.html">Нүүр хуудас</a></li>
         <li><a href="electronics.html">Электрон төхөөрөмжүүд ба Программууд</a></li>
@@ -105,6 +172,10 @@
         <li><a href="biophysics-biochemistry.html">Биофизик ба Биохими</a></li>
     </ul>
 </nav>
+
+<header>
+    <h1>Биофизик ба Биохими</h1>
+</header>
 
 <!-- Biophysics and Biochemistry Content -->
 <section id="biophysics-biochemistry">
@@ -122,6 +193,16 @@
     <p>© 2024 Биофизик ба Биохими. Бүх эрх хуулиар хамгаалагдсан.</p>
     <p><a href="privacy-policy.html">Нууцлалын бодлого</a> | <a href="terms.html">Үйлчилгээний нөхцөл</a></p>
 </footer>
+
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const sideMenu = document.getElementById('side-menu');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        sideMenu.classList.toggle('active');
+    });
+</script>
 
 </body>
 </html>
