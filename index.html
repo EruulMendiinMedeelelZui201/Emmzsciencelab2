@@ -53,25 +53,6 @@
             color: white;
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
         }
-        #search-container {
-            position: absolute;
-            top: 80px;
-            width: 80%;
-            max-width: 600px;
-            display: flex;
-            justify-content: center;
-            z-index: 1;
-            display: none;
-        }
-        #search-bar {
-            width: 100%;
-            padding: 12px;
-            font-size: 1rem;
-            border: none;
-            border-radius: 25px;
-            outline: none;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
         nav {
             background-color: #005f73;
             padding: 10px 0;
@@ -109,20 +90,11 @@
         .hamburger div {
             width: 30px;
             height: 4px;
-            background-color: white;
+            background-color: #28a745; /* Updated to bright green */
             margin: 6px 0;
             transition: all 0.3s ease;
         }
         @media (max-width: 600px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            .logo-title-container h2 {
-                font-size: 1.5rem;
-            }
-            #search-container {
-                width: 90%;
-            }
             nav ul {
                 flex-direction: column;
                 align-items: center;
@@ -137,9 +109,6 @@
             nav.active ul {
                 display: flex;
             }
-            #search-container.active {
-                display: flex;
-            }
         }
     </style>
 </head>
@@ -149,17 +118,6 @@
     <div class="logo-title-container">
         <img src="https://assets.onecompiler.app/42ypgxm44/42zfqk9v7/emmz%20logo.jpg" alt="Эммз Logo">
         <h2>Эммз лаб</h2>
-    </div>
-    <div id="search-container">
-        <input type="text" id="search-bar" list="search-options" placeholder="Салбар, холбоо барих хайх...">
-        <datalist id="search-options">
-            <option value="Электрон төхөөрөмжүүд ба Программууд">
-            <option value="Физикийн Симуляци ба Туршилтууд">
-            <option value="Анатоми ба Физиологи">
-            <option value="Биофизик ба Биохими">
-            <option value="Холбоо барих: tsolmonkhanorgil@gmail.com">
-            <option value="Утас: +95011555">
-        </datalist>
     </div>
     <h1>Эрүүл мэндийн мэдээлэл зүйн цахим лаборатори-д тавтай морилно уу</h1>
 </header>
@@ -185,26 +143,9 @@
 </section>
 
 <script>
+    // Toggle the navigation menu and show/hide search on hamburger click
     document.getElementById('hamburger').addEventListener('click', function() {
         document.querySelector('nav').classList.toggle('active');
-        document.getElementById('search-container').classList.toggle('active');
-    });
-
-    document.getElementById('search-bar').addEventListener('input', function(event) {
-        let searchQuery = event.target.value.toLowerCase();
-        if (searchQuery === "электрон төхөөрөмжүүд ба программууд") {
-            window.location.href = "electronics.html";
-        } else if (searchQuery === "физикийн симуляци ба туршилтууд") {
-            window.location.href = "physics.html";
-        } else if (searchQuery === "анатоми ба физиологи") {
-            window.location.href = "anatomy-physiology.html";
-        } else if (searchQuery === "биофизик ба биохими") {
-            window.location.href = "biophysics-biochemistry.html";
-        } else if (searchQuery === "холбоо барих: tsolmonkhanorgil@gmail.com") {
-            window.location.href = "mailto:tsolmonkhanorgil@gmail.com";
-        } else if (searchQuery === "утас: +95011555") {
-            window.location.href = "tel:+95011555";
-        }
     });
 </script>
 
@@ -213,4 +154,4 @@
 </footer>
 
 </body>
-</html> 
+</html>
