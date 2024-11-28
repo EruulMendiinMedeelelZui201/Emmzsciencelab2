@@ -168,6 +168,26 @@
     <h2>Туршилтуудыг судлах</h2>
     <p>Энэхүү платформ нь программчлал ашиглан шинжлэх ухааны туршилтуудыг интерактив байдлаар үзүүлэх бөгөөд таны суралцахад дэмжлэг үзүүлэх зорилготой юм.</p>
 </section>
+<script>
+    document.getElementById('search-bar').addEventListener('input', function(event) {
+        let searchQuery = event.target.value.toLowerCase();
+
+        if (searchQuery === "электрон төхөөрөмжүүд ба программууд") {
+            window.location.href = "electronics.html";
+        } else if (searchQuery === "физикийн симуляци ба туршилтууд") {
+            window.location.href = "physics.html";
+        } else if (searchQuery === "анатоми ба физиологи") {
+            window.location.href = "anatomy-physiology.html";
+        } else if (searchQuery === "биофизик ба биохими") {
+            window.location.href = "biophysics-biochemistry.html";
+        } else if (searchQuery === "холбоо барих: tsolmonkhanorgil@gmail.com") {
+            window.location.href = "mailto:tsolmonkhanorgil@gmail.com";
+        } else if (searchQuery === "утас: +95011555") {
+            window.location.href = "tel:+95011555";
+        }
+    });
+</script>
+
 
 <footer>
     <p>Холбоо барих: <a href="mailto:tsolmonkhanorgil@gmail.com">tsolmonkhanorgil@gmail.com</a> | Утас: +95011555</p>
