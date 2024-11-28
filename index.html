@@ -192,15 +192,19 @@
 
     document.getElementById('search-bar').addEventListener('input', function(event) {
         let searchQuery = event.target.value.toLowerCase();
-        const links = {
-            "электрон төхөөрөмжүүд ба программууд": "electronics.html",
-            "физикийн симуляци ба туршилтууд": "physics.html",
-            "анатоми ба физиологи": "anatomy-physiology.html",
-            "биофизик ба биохими": "biophysics-biochemistry.html",
-            "холбоо барих: tsolmonkhanorgil@gmail.com": "mailto:tsolmonkhanorgil@gmail.com",
-            "утас: +95011555": "tel:+95011555"
-        };
-        if (links[searchQuery]) window.location.href = links[searchQuery];
+        if (searchQuery === "электрон төхөөрөмжүүд ба программууд") {
+            window.location.href = "electronics.html";
+        } else if (searchQuery === "физикийн симуляци ба туршилтууд") {
+            window.location.href = "physics.html";
+        } else if (searchQuery === "анатоми ба физиологи") {
+            window.location.href = "anatomy-physiology.html";
+        } else if (searchQuery === "биофизик ба биохими") {
+            window.location.href = "biophysics-biochemistry.html";
+        } else if (searchQuery === "холбоо барих: tsolmonkhanorgil@gmail.com") {
+            window.location.href = "mailto:tsolmonkhanorgil@gmail.com";
+        } else if (searchQuery === "утас: +95011555") {
+            window.location.href = "tel:+95011555";
+        }
     });
 </script>
 
@@ -209,4 +213,4 @@
 </footer>
 
 </body>
-</html>
+</html> 
