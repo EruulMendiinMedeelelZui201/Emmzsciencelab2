@@ -2,11 +2,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Электрон төхөөрөмжүүд болон тэдгээрийн симуляциуд.">
-    <title>Электрон төхөөрөмжүүд ба Программууд</title>
+    <meta name="description" content="Электрон төхөөрөмжүүд ба Программууд">
+    <title>Электрон төхөөрөмжүүд</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* Reuse header, navigation, footer styles from main page */
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
@@ -17,7 +16,7 @@
 
         header {
             position: relative;
-            background-color: #28a745;
+            background-color: #005f73;
             color: white;
             text-align: center;
             padding: 20px;
@@ -69,6 +68,31 @@
         footer a:hover {
             text-decoration: underline;
         }
+
+        .simulation-links {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .simulation-links li {
+            margin-bottom: 10px;
+        }
+
+        .simulation-links a {
+            text-decoration: none;
+            color: #005f73;
+            font-weight: bold;
+        }
+
+        .simulation-links a:hover {
+            text-decoration: underline;
+        }
+
+        .simulation-links p {
+            margin: 5px 0 20px 0;
+            font-style: italic;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
@@ -81,25 +105,38 @@
 <nav>
     <ul>
         <li><a href="index.html">Нүүр хуудас</a></li>
-        <li><a href="physics.html">Физикийн Симуляци ба Туршилтууд</a></li>
+        <li><a href="electronics.html">Электрон төхөөрөмжүүд ба Программууд</a></li>
+        <li><a href="physics.html">Физиксийн Симуляци</a></li>
         <li><a href="anatomy-physiology.html">Анатоми ба Физиологи</a></li>
         <li><a href="biophysics-biochemistry.html">Биофизик ба Биохими</a></li>
     </ul>
 </nav>
 
-<!-- Electronics content -->
-<section>
-    <h2>Электроник</h2>
-    <p>Энэхүү хуудас нь электроникийн салбарт зориулагдсан. Доорх холбоосоор орж электроникийн симуляциудыг хийж үзээрэй:</p>
-    <ul>
-        <li><a href="https://example.com/simulation1" target="_blank">Симуляци 1</a></li>
-        <li><a href="https://example.com/simulation2" target="_blank">Симуляци 2</a></li>
+<!-- Electronics Content -->
+<section id="electronics">
+    <h2>Электрон төхөөрөмжүүд ба Программууд</h2>
+    <p>Энд та электроникийн төхөөрөмжүүд болон программуудын симуляцийн линкүүдийг олж болно:</p>
+    <ul class="simulation-links">
+        <li><a href="https://EruulMendiinMedeelelZui201.github.io/digital-oscilloscope/" target="_blank" rel="noopener noreferrer">Дижитал Осциллоскоп</a></li>
+        <p>Энэхүү симуляци нь цахилгаан дохиог харуулж, тэдгээрийн хэлбэлзлийг хэмжих боломжийг танд олгоно.</p>
+        
+        <li><a href="https://EruulMendiinMedeelelZui201.github.io/sweep-generator/" target="_blank" rel="noopener noreferrer">Симуляци 4: Sweep Generator Model Fg-1883</a></li>
+        <p>Энэ симуляци нь синус болон квадрат долгион үүсгэвэрийн ажиллагааг харуулж байна.</p>
+
+        <li><a href="https://EruulMendiinMedeelelZui201.github.io/ED-FC-1130B-universal/" target="_blank" rel="noopener noreferrer">Симуляци 5: ED-FC-1130B Universal</a></li>
+        <p>Энэ симуляци нь universal tester хэмжих хэрэгслийн ажиллагааг харуулж байна.</p>
+
+        <li><a href="https://EruulMendiinMedeelelZui201.github.io/electronic-circuit-board/" target="_blank" rel="noopener noreferrer">Симуляци 6: Электрон хэлхээ</a></li>
+        <p>Энэ симуляци нь электрон хэлхээнд бүрэлдэхүүн хэсгүүд хэрхэн ажиллаж байгааг харуулж байна.</p>
+        
+        <li><a href="https://eruulmendiinmedeelelzui201.github.io/electronic-circuit-board2/" target="_blank" rel="noopener noreferrer">3D электрон хэлхээний самбар</a></li>
     </ul>
 </section>
 
-<!-- Footer Section -->
+<!-- Footer -->
 <footer>
-    <p>Холбоо барих: <a href="mailto:tsolmonkhanorgil@gmail.com">tsolmonkhanorgil@gmail.com</a> | Утас: +95011555</p>
+    <p>© 2024 Электрон төхөөрөмжүүд ба Программууд. Бүх эрх хуулиар хамгаалагдсан.</p>
+    <p><a href="privacy-policy.html">Нууцлалын бодлого</a> | <a href="terms.html">Үйлчилгээний нөхцөл</a></p>
 </footer>
 
 </body>
