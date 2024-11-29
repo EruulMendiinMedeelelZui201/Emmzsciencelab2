@@ -43,6 +43,8 @@
             padding: 30px 20px;
             text-align: center;
             flex-grow: 1; /* Allow the content to take full available space */
+            position: relative;
+            z-index: 1; /* Ensures content appears in front of the sidebar */
         }
 
         section h2 {
@@ -70,7 +72,7 @@
             align-items: center;
             justify-content: flex-start;
             transition: right 0.3s ease-in-out;
-            z-index: 999;
+            z-index: 999; /* Ensures sidebar is above content */
         }
 
         nav.active {
@@ -122,7 +124,7 @@
             width: 30px;
             height: 25px;
             cursor: pointer;
-            z-index: 1000;
+            z-index: 1000; /* Ensure the hamburger is above other content */
         }
 
         .hamburger div {
