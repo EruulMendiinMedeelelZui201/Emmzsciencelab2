@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Эммз.ком - Visual Programming for Science Experiments</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -14,7 +15,7 @@
             color: #333;
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* Ensure footer sticks at the bottom */
+            min-height: 100vh;
         }
 
         header {
@@ -43,7 +44,6 @@
             padding: 30px 20px;
             text-align: center;
             flex-grow: 1;
-            z-index: 1;
         }
 
         section h2 {
@@ -61,7 +61,7 @@
         nav {
             position: fixed;
             top: 0;
-            right: -250px; /* Initially hidden */
+            right: -250px;
             width: 250px;
             height: 100%;
             background-color: #005f73;
@@ -271,25 +271,48 @@
 <nav id="side-menu">
     <img class="logo" src="https://assets.onecompiler.app/42ypgxm44/42zhq63f9/7156a93f-2fcb-4c2f-aa55-95328c74c5b3-removebg-preview.png" alt="Эммз Logo">
     <ul>
-        <li><a href="electronics.html">Электрон төхөөрөмжүүд ба Программууд</a></li>
-        <li><a href="physics.html">Физикийн Симуляци ба Туршилтууд</a></li>
-        <li><a href="anatomy-physiology.html">Анатоми ба Физиологи</a></li>
-        <li><a href="biophysics-biochemistry.html">Биофизик ба Биохими</a></li>
+        <li><a href="electronics.html"><i class="fas fa-cogs"></i> Электрон төхөөрөмжүүд ба Программууд</a></li>
+        <li><a href="physics.html"><i class="fas fa-flask"></i> Физикийн Симуляци ба Туршилтууд</a></li>
+        <li><a href="anatomy-physiology.html"><i class="fas fa-heartbeat"></i> Анатоми ба Физиологи</a></li>
+        <li><a href="biophysics-biochemistry.html"><i class="fas fa-dna"></i> Биофизик ба Биохими</a></li>
     </ul>
 </nav>
 
+<!-- Site Description Section (Visible by default) -->
 <section>
     <h2>Туршилтуудыг судлах</h2>
     <p>Энэхүү платформ нь программчлал ашиглан шинжлэх ухааны туршилтуудыг интерактив байдлаар үзүүлэх бөгөөд таныг суралцахад дэмжлэг үзүүлэх зорилготой юм.</p>
 </section>
 
+<!-- Hidden Content Sections -->
+<section class="hidden-section">
+    <h2>Физикийн Симуляци ба Туршилтууд</h2>
+    <p>Физикийн туршилтууд болон симуляциудыг програмчлалын тусламжтайгаар суралцах боломжтой.</p>
+</section>
+
+<section class="hidden-section">
+    <h2>Анатоми ба Физиологи</h2>
+    <p>Анатоми ба физиологийн үндсэн мэдлэгийг програмчлалын аргаар ойлгох боломжтой.</p>
+</section>
+
+<section class="hidden-section">
+    <h2>Биофизик ба Биохими</h2>
+    <p>Биофизик болон биохимийн шинжлэх ухааны туршилтуудыг интерактив байдлаар хийх боломжтой.</p>
+</section>
+
 <script>
     const hamburger = document.getElementById('hamburger');
     const sideMenu = document.getElementById('side-menu');
+    const hiddenSections = document.querySelectorAll('.hidden-section');
 
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
         sideMenu.classList.toggle('active');
+        
+        // Toggle visibility of all hidden sections when the menu is clicked
+        hiddenSections.forEach(section => {
+            section.style.display = section.style.display === 'block' ? 'none' : 'block';
+        });
     });
 </script>
 
