@@ -41,10 +41,10 @@
             font-weight: 400;
         }
 
-        section {
+      
+ section {
             padding: 30px 20px;
             text-align: center;
-            flex-grow: 1;
         }
 
         section h2 {
@@ -52,13 +52,48 @@
             margin-bottom: 20px;
         }
 
-        section p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
+                .subjects-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
         }
 
+        .subject-item {
+            width: 140px;
+            height: 140px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 40px;
+            text-decoration: none;
+            color: white;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .subject-item i {
+            font-size: 2.5rem;
+            margin-bottom: 8px;
+        }
+
+        .subject-item h3 {
+            margin: 0;
+            font-size: 1rem;
+            text-align: center;
+        }
+        /* Subject Colors */
+        .electronics { background-color: #007f5f; }
+        .physics { background-color: #00b4d8; }
+        .anatomy { background-color: #e63946; }
+        .biophysics { background-color: #8338ec; }
+        .mathematics { background-color: #ff9f1c; }
+
+        .subject-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
         nav {
             position: fixed;
             top: 0;
@@ -256,6 +291,11 @@
     </style>
 </head>
 <body>
+
+      
+    </style>
+</head>
+<body>
 <!-- Header with the missing text -->
 <header>
     <h1>Эрүүл мэндийн мэдээлэл зүйн цахим лаборатори-д тавтай морилно уу</h1>
@@ -280,6 +320,31 @@
         <li><a href="mathematics.html"><i class="fas fa-signal"></i> Математик</a></li>
     </ul>
 </nav>
+<section>
+    
+    <div class="subjects-container">
+        <a href="electronics.html" class="subject-item electronics">
+            <i class="fas fa-cogs"></i>
+            <h3>Электрон төхөөрөмжүүд</h3>
+        </a>
+        <a href="physics.html" class="subject-item physics">
+            <i class="fas fa-flask"></i>
+            <h3>Физикийн Симуляци</h3>
+        </a>
+        <a href="anatomy-physiology.html" class="subject-item anatomy">
+            <i class="fas fa-heartbeat"></i>
+            <h3>Анатоми ба Физиологи</h3>
+        </a>
+        <a href="biophysics-biochemistry.html" class="subject-item biophysics">
+            <i class="fas fa-dna"></i>
+            <h3>Биофизик ба Биохими</h3>
+        </a>
+        <a href="mathematics.html" class="subject-item mathematics">
+            <i class="fas fa-signal"></i>
+            <h3>Математик</h3>
+        </a>
+    </div>
+</section>
 
 <!-- Site Description Section (Visible by default) -->
 <section>
@@ -287,27 +352,7 @@
     <p>Энэхүү платформ нь программчлал ашиглан шинжлэх ухааны туршилтуудыг интерактив байдлаар үзүүлэх бөгөөд таныг суралцахад дэмжлэг үзүүлэх зорилготой юм.</p>
 </section>
 
-<!-- Hidden Content Sections -->
-<section class="hidden-section">
-    <h2>Физикийн Симуляци ба Туршилтууд</h2>
-    <p>Физикийн туршилтууд болон симуляциудыг програмчлалын тусламжтайгаар суралцах боломжтой.</p>
-</section>
 
-<section class="hidden-section">
-    <h2>Анатоми ба Физиологи</h2>
-    <p>Анатоми болон физиологийн асуудлуудыг харуулах интерактив мэдлэгийн эх сурвалжууд.</p>
-</section>
-
-<section class="hidden-section">
-    <h2>Биофизик ба Биохими</h2>
-    <p>Биофизик, биохими болон бусад шинжлэх ухааны сэдвүүдээр боловсрол эзэмших боломжийг олгоно.</p>
-</section>
-
-<!-- New Mathematics Section -->
-<section class="hidden-section">
-    <h2>Математик</h2>
-    <p>Математикийн үндсэн ойлголтууд болон тооцоолол хийх аргачлалуудыг програмчлалын тусламжтайгаар судлах боломжтой.</p>
-</section>
 
 <footer>
     <p>Холбоо барих: <a href="mailto:tsolmonkhanorgil@gmail.com">tsolmonkhanorgil@gmail.com</a> | Утас: +95011555</p>
