@@ -276,6 +276,8 @@
         <li><a href="physics.html"><i class="fas fa-flask"></i> Физикийн Симуляци ба Туршилтууд</a></li>
         <li><a href="anatomy-physiology.html"><i class="fas fa-heartbeat"></i> Анатоми ба Физиологи</a></li>
         <li><a href="biophysics-biochemistry.html"><i class="fas fa-dna"></i> Биофизик ба Биохими</a></li>
+        <!-- New Mathematics Section Link -->
+        <li><a href="mathematics.html"><i class="fas fa-signal"></i> Математик</a></li>
     </ul>
 </nav>
 
@@ -301,20 +303,21 @@
     <p>Биофизик, биохими болон бусад шинжлэх ухааны сэдвүүдээр боловсрол эзэмших боломжийг олгоно.</p>
 </section>
 
-<!-- Footer with logo -->
+<!-- New Mathematics Section -->
+<section class="hidden-section">
+    <h2>Математик</h2>
+    <p>Математикийн үндсэн ойлголтууд болон тооцоолол хийх аргачлалуудыг програмчлалын тусламжтайгаар судлах боломжтой.</p>
+</section>
+
 <footer>
     <p>Холбоо барих: <a href="mailto:tsolmonkhanorgil@gmail.com">tsolmonkhanorgil@gmail.com</a> | Утас: +95011555</p>
     <img class="footer-logo" src="https://assets.onecompiler.app/42ypgxm44/42zhq63f9/7156a93f-2fcb-4c2f-aa55-95328c74c5b3-removebg-preview.png" alt="Эммз Logo">
 </footer>
 
 <script>
-    // JavaScript to toggle the hamburger menu
-    const hamburger = document.getElementById('hamburger');
-    const sideMenu = document.getElementById('side-menu');
-
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        sideMenu.classList.toggle('active');
+    document.getElementById("hamburger").addEventListener("click", function () {
+        document.getElementById("side-menu").classList.toggle("active");
+        document.getElementById("hamburger").classList.toggle("active");
     });
 </script>
 </body>
