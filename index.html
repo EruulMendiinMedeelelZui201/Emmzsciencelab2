@@ -50,7 +50,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             transition: right 0.3s ease-in-out; /* Slide in/out animation */
             z-index: 999;
         }
@@ -59,10 +59,23 @@
             right: 0; /* Slide into view from the right */
         }
 
+        nav .logo {
+            margin-top: 20px;
+            width: 80px;  /* Adjust logo size */
+            height: auto;
+            opacity: 0.9;  /* Slightly reduce opacity for a smoother, less prominent look */
+            transition: opacity 0.3s ease;
+        }
+
+        nav .logo:hover {
+            opacity: 1; /* Full opacity when hovering over the logo */
+        }
+
         nav ul {
             list-style: none;
             padding: 0;
-            margin: 0;
+            margin-top: 30px; /* Space for the logo */
+            width: 100%;
             text-align: center;
         }
 
@@ -145,17 +158,17 @@
             text-decoration: underline;
         }
 
-        /* Add styling for logo in the footer */
+        /* Footer logo styling */
         footer .footer-logo {
             margin-top: 10px;
-            width: 60px;  /* Adjusted logo size */
+            width: 60px;
             height: auto;
-            opacity: 0.9;  /* Slightly reduce opacity for a smoother, less prominent look */
+            opacity: 0.9;
             transition: opacity 0.3s ease;
         }
 
         footer .footer-logo:hover {
-            opacity: 1; /* Full opacity when hovering over the logo */
+            opacity: 1;
         }
     </style>
 </head>
@@ -174,6 +187,9 @@
 
 <!-- Sidebar Navigation -->
 <nav id="side-menu">
+    <!-- Logo placed at the top of the sidebar -->
+    <img class="logo" src="https://assets.onecompiler.app/42ypgxm44/42zhq63f9/7156a93f-2fcb-4c2f-aa55-95328c74c5b3-removebg-preview.png" alt="Эммз Logo">
+
     <ul>
         <li><a href="electronics.html">Электрон төхөөрөмжүүд ба Программууд</a></li>
         <li><a href="physics.html">Физикийн Симуляци ба Туршилтууд</a></li>
@@ -197,7 +213,7 @@
     });
 </script>
 
-<!-- Footer with new logo -->
+<!-- Footer with logo -->
 <footer>
     <p>Холбоо барих: <a href="mailto:tsolmonkhanorgil@gmail.com">tsolmonkhanorgil@gmail.com</a> | Утас: +95011555</p>
     <img class="footer-logo" src="https://assets.onecompiler.app/42ypgxm44/42zhq63f9/7156a93f-2fcb-4c2f-aa55-95328c74c5b3-removebg-preview.png" alt="Эммз Logo">
