@@ -23,33 +23,22 @@
             background-image: url('https://assets.onecompiler.app/42ypgxm44/42z9pgru6/%D0%A5%D0%B0%D0%BD-%D0%9E%D1%80%D0%B3%D0%B8%D0%BB_%D0%A6%D0%BE%D0%BB%D0%BC%D0%BE%D0%BD_logo_for_visual_computer_science_lab_site_which_ha_27ed3299-1dab-470b-9607-e863212a4399.png');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
-            height: 350px;
+            background-attachment: fixed; /* Ensures the background image is fixed while scrolling */
+            height: 250px;  /* Ensure the height is defined for the background image */
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: white;
-            padding: 20px;
-        }
-
-        /* Overlay for better text visibility */
-        header::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
-            z-index: -1; /* Keep overlay behind the text */
+            padding: 0 20px;
         }
 
         header h1 {
             font-size: 2.5rem;
             margin: 0;
             line-height: 1.4;
-            font-weight: 600;
+            font-weight: 400;
         }
 
         section {
@@ -267,17 +256,17 @@
     </style>
 </head>
 <body>
+<!-- Header with the missing text -->
+<header>
+    <h1>Эрүүл мэндийн мэдээлэл зүйн цахим лаборатори-д тавтай морилно уу</h1>
+</header>
+
 <!-- Hamburger Menu -->
 <div class="hamburger" id="hamburger">
     <div></div>
     <div></div>
     <div></div>
 </div>
-
-<!-- Header Section -->
-<header>
-    <h1>Эрүүл мэндийн мэдээлэл зүйн цахим лаборатори-д тавтай морилно уу</h1>
-</header>
 
 <!-- Sidebar Navigation -->
 <nav id="side-menu">
@@ -293,10 +282,33 @@
 <!-- Site Description Section (Visible by default) -->
 <section>
     <h2>Туршилтуудыг судлах</h2>
-    <p>Энэхүү платформ нь программчлал ашиглан шинжлэх ухааны туршилтуудыг үзүүлэх зорилготой.</p>
+    <p>Энэхүү платформ нь программчлал ашиглан шинжлэх ухааны туршилтуудыг интерактив байдлаар үзүүлэх бөгөөд таныг суралцахад дэмжлэг үзүүлэх зорилготой юм.</p>
 </section>
 
+<!-- Hidden Content Sections -->
+<section class="hidden-section">
+    <h2>Физикийн Симуляци ба Туршилтууд</h2>
+    <p>Физикийн туршилтууд болон симуляциудыг програмчлалын тусламжтайгаар суралцах боломжтой.</p>
+</section>
+
+<section class="hidden-section">
+    <h2>Анатоми ба Физиологи</h2>
+    <p>Анатоми болон физиологийн асуудлуудыг харуулах интерактив мэдлэгийн эх сурвалжууд.</p>
+</section>
+
+<section class="hidden-section">
+    <h2>Биофизик ба Биохими</h2>
+    <p>Биофизик, биохими болон бусад шинжлэх ухааны сэдвүүдээр боловсрол эзэмших боломжийг олгоно.</p>
+</section>
+
+<!-- Footer with logo -->
+<footer>
+    <p>Холбоо барих: <a href="mailto:tsolmonkhanorgil@gmail.com">tsolmonkhanorgil@gmail.com</a> | Утас: +95011555</p>
+    <img class="footer-logo" src="https://assets.onecompiler.app/42ypgxm44/42zhq63f9/7156a93f-2fcb-4c2f-aa55-95328c74c5b3-removebg-preview.png" alt="Эммз Logo">
+</footer>
+
 <script>
+    // JavaScript to toggle the hamburger menu
     const hamburger = document.getElementById('hamburger');
     const sideMenu = document.getElementById('side-menu');
 
@@ -305,12 +317,6 @@
         sideMenu.classList.toggle('active');
     });
 </script>
-
-<!-- Footer -->
-<footer>
-    <p>Холбоо барих: <a href="mailto:tsolmonkhanorgil@gmail.com">tsolmonkhanorgil@gmail.com</a> | Утас: +95011555</p>
-    <img class="footer-logo" src="https://assets.onecompiler.app/42ypgxm44/42zhq63f9/7156a93f-2fcb-4c2f-aa55-95328c74c5b3-removebg-preview.png" alt="Эммз Logo">
-</footer>
-
 </body>
 </html>
+
