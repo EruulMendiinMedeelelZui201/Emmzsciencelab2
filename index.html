@@ -364,6 +364,12 @@
         document.getElementById("side-menu").classList.toggle("active");
         document.getElementById("hamburger").classList.toggle("active");
     });
+    <script>
+  // Disable right-click
+  document.addEventListener('contextmenu', function(event) {
+    event.preventDefault();
+  });
+</script>
 </script>
 </body>
 </html>
