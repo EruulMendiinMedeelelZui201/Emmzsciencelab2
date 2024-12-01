@@ -16,15 +16,15 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            background-image: url('https://assets.onecompiler.app/42ypgxm44/42zpb7bkj/image1_0.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
 
         header {
             position: relative;
-            background-image: url('https://assets.onecompiler.app/42ypgxm44/42zpb9k3q/image_b5snwctw_1732988629031_raw.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed; /* Ensures the background image is fixed while scrolling */
-            height: 250px;  /* Ensure the height is defined for the background image */
+            height: 250px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -32,19 +32,14 @@
             text-align: center;
             color: white;
             padding: 0 20px;
+            z-index: 1;
         }
 
-        header h1 {
-            font-size: 2.5rem;
-            margin: 0;
-            line-height: 1.4;
-            font-weight: 400;
-        }
-
-      
- section {
+        section {
             padding: 30px 20px;
             text-align: center;
+            z-index: 1;
+            margin-top: 80px; /* Increased margin-top to move the section further down */
         }
 
         section h2 {
@@ -52,12 +47,13 @@
             margin-bottom: 20px;
         }
 
-                .subjects-container {
+        .subjects-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 15px;
             padding: 20px;
+            z-index: 1;
         }
 
         .subject-item {
@@ -83,6 +79,7 @@
             font-size: 1rem;
             text-align: center;
         }
+
         /* Subject Colors */
         .electronics { background-color: #007f5f; }
         .physics { background-color: #00b4d8; }
@@ -94,6 +91,7 @@
             transform: translateY(-5px);
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
         }
+
         nav {
             position: fixed;
             top: 0;
@@ -112,18 +110,6 @@
 
         nav.active {
             right: 0;
-        }
-
-        nav .logo {
-            margin-top: 20px;
-            width: 80px;
-            height: auto;
-            opacity: 0.9;
-            transition: opacity 0.3s ease;
-        }
-
-        nav .logo:hover {
-            opacity: 1;
         }
 
         nav ul {
@@ -191,7 +177,7 @@
             padding: 20px;
             background-color: #005f73;
             color: white;
-            margin-top: auto;
+            margin-top: 40px; /* Reduced margin-top to bring footer closer to content */
         }
 
         footer a {
@@ -201,18 +187,6 @@
 
         footer a:hover {
             text-decoration: underline;
-        }
-
-        footer .footer-logo {
-            margin-top: 10px;
-            width: 60px;
-            height: auto;
-            opacity: 0.9;
-            transition: opacity 0.3s ease;
-        }
-
-        footer .footer-logo:hover {
-            opacity: 1;
         }
 
         /* Media Queries for responsiveness */
@@ -237,15 +211,6 @@
 
             nav ul li a {
                 font-size: 1rem;
-            }
-
-            footer .footer-logo {
-                width: 50px;
-            }
-
-            .hamburger {
-                top: 15px;
-                right: 15px;
             }
         }
 
@@ -292,78 +257,65 @@
 </head>
 <body>
 
-      
-    </style>
-</head>
-<body>
-<!-- Header with the missing text -->
-<header>
-    <h1>Эрүүл мэндийн мэдээлэл зүйн цахим лаборатори-д тавтай морилно уу</h1>
-</header>
+    <!-- Subjects Section -->
+    <section>
+        <div class="subjects-container">
+            <a href="electronics.html" class="subject-item electronics">
+                <i class="fas fa-cogs"></i>
+                <h3>Электрон төхөөрөмжүүд</h3>
+            </a>
+            <a href="physics.html" class="subject-item physics">
+                <i class="fas fa-flask"></i>
+                <h3>Физикийн Симуляци</h3>
+            </a>
+            <a href="anatomy-physiology.html" class="subject-item anatomy">
+                <i class="fas fa-heartbeat"></i>
+                <h3>Анатоми ба Физиологи</h3>
+            </a>
+            <a href="biophysics-biochemistry.html" class="subject-item biophysics">
+                <i class="fas fa-dna"></i>
+                <h3>Биофизик ба Биохими</h3>
+            </a>
+            <a href="mathematics.html" class="subject-item mathematics">
+                <i class="fas fa-signal"></i>
+                <h3>Математик</h3>
+            </a>
+        </div>
+    </section>
 
-<!-- Hamburger Menu -->
-<div class="hamburger" id="hamburger">
-    <div></div>
-    <div></div>
-    <div></div>
-</div>
+    <!-- Header with the missing text -->
+    <header>
+        <!-- Removed the <h1> text -->
+    </header>
 
-<!-- Sidebar Navigation -->
-<nav id="side-menu">
-    <img class="logo" src="https://assets.onecompiler.app/42ypgxm44/42zhq63f9/7156a93f-2fcb-4c2f-aa55-95328c74c5b3-removebg-preview.png" alt="Эммз Logo">
-    <ul>
-        <li><a href="electronics.html"><i class="fas fa-cogs"></i> Электрон төхөөрөмжүүд ба Программууд</a></li>
-        <li><a href="physics.html"><i class="fas fa-flask"></i> Физикийн Симуляци ба Туршилтууд</a></li>
-        <li><a href="anatomy-physiology.html"><i class="fas fa-heartbeat"></i> Анатоми ба Физиологи</a></li>
-        <li><a href="biophysics-biochemistry.html"><i class="fas fa-dna"></i> Биофизик ба Биохими</a></li>
-        <!-- New Mathematics Section Link -->
-        <li><a href="mathematics.html"><i class="fas fa-signal"></i> Математик</a></li>
-    </ul>
-</nav>
-<section>
-    
-    <div class="subjects-container">
-        <a href="electronics.html" class="subject-item electronics">
-            <i class="fas fa-cogs"></i>
-            <h3>Электрон төхөөрөмжүүд</h3>
-        </a>
-        <a href="physics.html" class="subject-item physics">
-            <i class="fas fa-flask"></i>
-            <h3>Физикийн Симуляци</h3>
-        </a>
-        <a href="anatomy-physiology.html" class="subject-item anatomy">
-            <i class="fas fa-heartbeat"></i>
-            <h3>Анатоми ба Физиологи</h3>
-        </a>
-        <a href="biophysics-biochemistry.html" class="subject-item biophysics">
-            <i class="fas fa-dna"></i>
-            <h3>Биофизик ба Биохими</h3>
-        </a>
-        <a href="mathematics.html" class="subject-item mathematics">
-            <i class="fas fa-signal"></i>
-            <h3>Математик</h3>
-        </a>
+    <!-- Hamburger Menu -->
+    <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
     </div>
-</section>
 
-<!-- Site Description Section (Visible by default) -->
-<section>
-    <h2>Туршилтуудыг судлах</h2>
-    <p>Энэхүү платформ нь программчлал ашиглан шинжлэх ухааны туршилтуудыг интерактив байдлаар үзүүлэх бөгөөд таныг суралцахад дэмжлэг үзүүлэх зорилготой юм.</p>
-</section>
+    <!-- Sidebar Navigation -->
+    <nav id="side-menu">
+        <ul>
+            <li><a href="electronics.html"><i class="fas fa-cogs"></i> Электрон төхөөрөмжүүд ба Программууд</a></li>
+            <li><a href="physics.html"><i class="fas fa-flask"></i> Физикийн Симуляци ба Туршилтууд</a></li>
+            <li><a href="anatomy-physiology.html"><i class="fas fa-heartbeat"></i> Анатоми ба Физиологи</a></li>
+            <li><a href="biophysics-biochemistry.html"><i class="fas fa-dna"></i> Биофизик ба Биохими</a></li>
+            <!-- New Mathematics Section Link -->
+            <li><a href="mathematics.html"><i class="fas fa-signal"></i> Математик</a></li>
+        </ul>
+    </nav>
 
+    <footer>
+        <p>Холбоо барих: <a href="mailto:tsolmonkhanorgil@gmail.com">tsolmonkhanorgil@gmail.com</a> | Утас: +95011555</p>
+    </footer>
 
-
-<footer>
-    <p>Холбоо барих: <a href="mailto:tsolmonkhanorgil@gmail.com">tsolmonkhanorgil@gmail.com</a> | Утас: +95011555</p>
-    <img class="footer-logo" src="https://assets.onecompiler.app/42ypgxm44/42zhq63f9/7156a93f-2fcb-4c2f-aa55-95328c74c5b3-removebg-preview.png" alt="Эммз Logo">
-</footer>
-
-<script>
-    document.getElementById("hamburger").addEventListener("click", function () {
-        document.getElementById("side-menu").classList.toggle("active");
-        document.getElementById("hamburger").classList.toggle("active");
-    });
-</script>
+    <script>
+        document.getElementById("hamburger").addEventListener("click", function () {
+            document.getElementById("side-menu").classList.toggle("active");
+            document.getElementById("hamburger").classList.toggle("active");
+        });
+    </script>
 </body>
 </html>
