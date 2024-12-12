@@ -23,8 +23,8 @@
             background-image: url('https://assets.onecompiler.app/42ypgxm44/42zj2gta8/%D0%A5%D0%B0%D0%BD-%D0%9E%D1%80%D0%B3%D0%B8%D0%BB_%D0%A6%D0%BE%D0%BB%D0%BC%D0%BE%D0%BD_green_picture_with_computer_science,biophysics,bio_209a8005-a600-40fc-a3b2-559d40ca7e1f.png');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* Ensures the background image is fixed while scrolling */
-            height: 250px;  /* Ensure the height is defined for the background image */
+            background-attachment: fixed;
+            height: 250px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -41,8 +41,7 @@
             font-weight: 400;
         }
 
-      
- section {
+        section {
             padding: 30px 20px;
             text-align: center;
         }
@@ -52,7 +51,7 @@
             margin-bottom: 20px;
         }
 
-                .subjects-container {
+        .subjects-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -83,16 +82,52 @@
             font-size: 1rem;
             text-align: center;
         }
+
         /* Subject Colors */
         .electronics { background-color: #007f5f; }
         .physics { background-color: #00b4d8; }
         .anatomy { background-color: #e63946; }
         .biophysics { background-color: #8338ec; }
         .mathematics { background-color: #ff9f1c; }
+        .chatbot { background-color: #ff6347; } /* New bot section color */
 
         .subject-item:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #005f73;
+            color: white;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 768px) {
+            header {
+                height: 250px;
+                text-align: center;
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            footer .footer-logo {
+                width: 50px;
+            }
         }
         nav {
             position: fixed;
@@ -318,6 +353,10 @@
         <a href="mathematics.html" class="subject-item mathematics">
             <i class="fas fa-signal"></i>
             <h3>Математик</h3>
+           <!-- New Chatbot Link -->
+        <a href="bot.html" class="subject-item chatbot">
+            <i class="fas fa-comments"></i>
+            <h3>Зааварчлах бот</h3>
         </a>
     </div>
 </section>
